@@ -48,11 +48,12 @@ class AuthService {
   /// ---------------------------------------
 
   final appAuth = FlutterAppAuth();
-  final secureStoreage = FlutterSecureStorage();
 
   /// ---------------------------------------
   ///   2 - instantiate secure storage
   /// ---------------------------------------
+
+  final secureStoreage = FlutterSecureStorage();
 
   /// ---------------------------------------
   ///   3 - init
@@ -139,11 +140,7 @@ class AuthService {
   }
 
   /// ---------------------------------------
-  ///   5 - setProfileAndIdToken
-  /// ---------------------------------------
-
-  /// ---------------------------------------
-  ///   6 - logout
+  ///   5 - logout
   /// ---------------------------------------
 
   logout() async {
@@ -159,7 +156,7 @@ class AuthService {
   }
 
   /// ---------------------------------------
-  ///   7 - parseIdToken
+  ///   6 - parseIdToken
   /// ---------------------------------------
 
   AuthIdToken parseIdToken(String idToken) {
@@ -172,7 +169,7 @@ class AuthService {
   }
 
   /// ---------------------------------------
-  ///   8 - getUserDetails
+  ///   7 - getUserDetails
   /// ---------------------------------------
 
   Future<AuthUser> getUserDetails(String accessToken) async {
@@ -192,8 +189,4 @@ class AuthService {
       throw Exception('Failed to get user details!');
     }
   }
-
-  /// ---------------------------------------
-  ///   9 - availableCustomerService
-  /// ---------------------------------------
 }
